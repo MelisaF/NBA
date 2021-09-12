@@ -1,7 +1,6 @@
 import React from "react";
 import {Button} from "../components/Button";
-import MenuItems from "../components/Navbar/MenuItems";
-import './Navbar.css';
+import './Navbar/Navbar.css';
 
 const CartWidget = () => {
     return (

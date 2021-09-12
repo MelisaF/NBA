@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {MenuItems} from "./MenuItems";
-import {CartWidget} from "../CartWidget";
+import CartWidget from "../CartWidget";
 import './Navbar.css';
 
 class Navbar extends Component {
