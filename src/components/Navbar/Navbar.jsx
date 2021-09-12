@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {MenuItems} from "./MenuItems";
-import {Button} from "../Button";
+import {CartWidget} from "../CartWidget";
 import './Navbar.css';
 
 class Navbar extends Component {
@@ -10,7 +10,7 @@ class Navbar extends Component {
     }
     render() {
         return(
-            <nav className="Navbar-items">
+            <nav className="navbar-items">
                 <h1 className="navbar-title">Classic NBA</h1>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times': 'fas fa-bars'}></i>
@@ -26,10 +26,7 @@ class Navbar extends Component {
                         )
                     })}    
                 </ul>
-                <div className="btn-icon">
-                    <Button><i class="fas fa-user"></i></Button>
-                    <Button><i class="fas fa-shopping-cart"></i></Button>
-                </div>
+                <CartWidget/>
             </nav>
         )
     }
