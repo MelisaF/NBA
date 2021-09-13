@@ -5,7 +5,7 @@ import ItemCount from "../components/ItemCount";
 export const ItemListContainer = ({shop}) => {
     return (
         <div className="shop-text">{shop}
-        <ItemCount/>
+        <ItemCount stock={10} initial= {1} onAdd={() =>{}} />
         </div>
     )
     
