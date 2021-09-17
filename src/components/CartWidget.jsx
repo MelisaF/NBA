@@ -7,6 +7,7 @@ const CartWidget = () => {
         <div className="btn-icon">
             <Button><i className="fas fa-user"></i></Button>
             <Button><i className="fas fa-shopping-cart"></i></Button>
+            <span>0</span>
         </div>
     )
 }
