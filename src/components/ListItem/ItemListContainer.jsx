@@ -35,10 +35,10 @@ export const ItemListContainer = () => {
     asyncMock
         .then ((resultado) => {
             setProductos (resultado);
-        })
+    })
     })
 
-    if(productos.lenght > 0) {
+    if(productos.length > 0) {
         return(
                 <>
                     <ItemList productos = {productos}/>

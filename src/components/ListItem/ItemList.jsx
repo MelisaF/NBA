@@ -1,10 +1,14 @@
-import {Item} from './Item'
+import {Item} from './Item';
+import '../ListItem/Item.css';
 
 export const ItemList = ({productos}) => {
     return (
-        <ul>
-            {productos.map ((producto, indice) => {
-                return <Item producto ={producto}/>
+        <ul className="productos-row">
+            {productos.map (producto => {
+                return <Item
+                    key= {producto.id} 
+                    producto ={producto}
+                />
             })}
         </ul>
             
