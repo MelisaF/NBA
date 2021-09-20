@@ -1,5 +1,5 @@
 import {Card, Button} from 'react-bootstrap';
-
+import '../ListItem/Item.css';
 
 export const Item = ({producto}) => {
     return (
@@ -13,7 +13,7 @@ export const Item = ({producto}) => {
                             {producto.modelo}<br/>
                             ${producto.precio}<br/>
                         </Card.Text>
-                        <Button variant="light">AÑADIR AL CARRITO</Button>
+                        <Button variant="dark">AÑADIR AL CARRITO</Button>
                     </Card.Body>
                 </Card>
             </div>

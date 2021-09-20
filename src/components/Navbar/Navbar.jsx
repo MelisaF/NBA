@@ -1,35 +1,29 @@
-import React, {Component} from "react";
-import {MenuItems} from "./MenuItems";
-import CartWidget from "../CartWidget";
+import {Navbar, Container, Nav} from "react-bootstrap";
+import CartWidget from "./CartWidget";
 import './Navbar.css';
 
-class Navbar extends Component {
-    state = {clicked : false}
-    handleClick = () => {
-        this.setState ({ clicked: !this.state.clicked})
-    }
-    render() {
+export const NavBar = () => {
         return(
-            <nav className="navbar-items">
-                <h1 className="navbar-title">Classic NBA</h1>
-                <div className="menu-icon" onClick={this.handleClick}>
-                    <i className={this.state.clicked ? 'fas fa-times': 'fas fa-bars'}></i>
+            <div>
+                <div>
+                    <p className="text-envio">ENVIO GRATIS A PARTIR DE $5000</p>
                 </div>
-                <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-                    {MenuItems.map((item, index) => {
-                        return (
-                            <li key= {index}>
-                                <a className={item.cName} href= {item.url}>
-                                    {item.title}
-                                </a>
-                            </li>
-                        )
-                    })}    
-                </ul>
-                <CartWidget/>
-            </nav>
+                <div>
+                    <Navbar className="navbar-container" expand="lg">
+                        <Container className="navbar-container">
+                            <Navbar.Brand className="navbar-title" href="#home">Classic NBA</Navbar.Brand>
+                            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                            <Nav className="list-item">
+                                <Nav.Link className="list-item" href="#home">Inicio</Nav.Link>
+                                <Nav.Link className="list-item" href="#link">Productos</Nav.Link>
+                                <Nav.Link className="list-item" href="#link">Contacto</Nav.Link>
+                                <Nav.Link className="list-item" href="#link">Ayuda</Nav.Link>
+                            </Nav>
+                            <CartWidget/>
+                        </Container>
+                    </Navbar>
+                    
+                </div>
+            </div>
         )
-    }
 }
-
-export default Navbar
