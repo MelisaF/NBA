@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import {ItemList} from '../ListItem/ItemList';
 import {Spinners} from '../ListItem/Spinners';
 import {ProductosSimulador} from '../ListItem/productosSimulador';
-import { ItemDetailContainer } from './ItemDetailContainer';
+
 
 export const ItemListContainer = () => {
 
@@ -24,7 +24,6 @@ export const ItemListContainer = () => {
         return(
                 <>
                     <ItemList productos = {productos}/>
-                    <ItemDetailContainer/>
                 </>
         );
     }
