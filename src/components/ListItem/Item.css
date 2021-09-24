@@ -8,3 +8,10 @@
 .spinner {
     margin-left: 47%;
 }
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 7%;
+    margin-left: 3%;
+    flex-wrap: wrap;
+}
