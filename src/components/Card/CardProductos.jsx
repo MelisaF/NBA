@@ -1,21 +1,19 @@
 import {Card} from "react-bootstrap";
-import {Link} from 'react-router-dom'
-import '../estilos.css'
+import {Link} from 'react-router-dom';
+import '../estilos.css';
 
-export const CardProductos = ({img, id, nombre, modelo, precio}) => {
+export const CardProductos = ({img, id, precio, nombre, modelo}) => {
     return (
         <Card border="0" style={{ width: '18rem'}}>
             <Card.Img variant="top" src={img} alt={modelo}/>
             <Card.Body>
                 <Card.Title>
-                    ID: {id} <br/>
-                    NOMBRE: {nombre}<br/>
-                    MODELO: {modelo}<br/>
+                    Id: {id} <br/>
+                    Precio: ${precio} <br/>
+                    Nombre: {nombre}<br/>
+                    Modelo: {modelo}<br/>
                 </Card.Title>
-                <Card.Text>
-                    $ {precio}
-                </Card.Text>
-                <Link to={`/producto/${id}`}className="btn btn-dark btn-compra">COMPRAR</Link>
+                <Link to={`/producto/${id}`}className="btn btn-dark btn-compra">VER DETALLE</Link>
             </Card.Body>
         </Card>
     )

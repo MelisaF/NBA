@@ -4,6 +4,7 @@ import { ProductosAtlanta } from "../ProductosAtlanta/ProductosAtlanta";
 import { ProductosCeltics } from "../ProductosCeltics/ProductosCeltics";
 import { ProductosChicago } from "../ProductosChicago/ProductosChicago";
 import {ProductoDetail} from "../ProductoDetail/ProductoDetail";
+import { PaginaInicio } from "../PaginaInicio/PaginaInicio";
 import {NavBar} from "../Navbar/NavBar";
 
 export const AppRoutes = () => {
@@ -12,6 +13,7 @@ export const AppRoutes = () => {
             <Router>
                 <NavBar/>
                 <Switch>
+                    <Route path="/" exact component={PaginaInicio}/>
                     <Route path="/atlanta" exact component={ProductosAtlanta}/>
                     <Route path="/celtics" exact component={ProductosCeltics}/>
                     <Route path="/chicago" exact component={ProductosChicago}/>

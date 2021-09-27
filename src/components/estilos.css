@@ -6,3 +6,15 @@
 .btn-compra {
     margin-left: 25%;
 }
+.detalleProducto-container {
+    display: flex;
+}
+.img-container {
+    max-width: 300px;
+}
+.img-container img {
+    width: 100%;
+}
+.description-container {
+    margin-left: 10px;
+}
