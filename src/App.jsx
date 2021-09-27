@@ -1,15 +1,11 @@
 import React from "react";
 import './App.css';
-import {NavBar} from "./components/Navbar/Navbar";
-import {ItemListContainer} from './components/ListItem/ItemListContainer';
-import {ItemDetailContainer} from './components/ListItem/ItemDetailContainer';
+import { AppRoutes } from "./components/routes/AppRoutes";
 
 const App = () => {
     return (
         <div className="App">
-            <NavBar/>
-            <ItemListContainer/> 
-            <ItemDetailContainer/>
+            <AppRoutes/>
         </div>
     )
 }

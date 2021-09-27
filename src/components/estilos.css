@@ -1,0 +1,8 @@
+.container-productos {
+    border-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+.btn-compra {
+    margin-left: 25%;
+}

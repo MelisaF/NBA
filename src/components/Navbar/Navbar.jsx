@@ -1,6 +1,7 @@
 import {Navbar, Container, Nav} from "react-bootstrap";
 import CartWidget from "./CartWidget";
 import './Navbar.css';
+import {NavLink} from 'react-router-dom'
 
 export const NavBar = () => {
         return(
@@ -11,13 +12,12 @@ export const NavBar = () => {
                 <div>
                     <Navbar className="navbar-container" expand="lg">
                         <Container className="navbar-container">
-                            <Navbar.Brand className="navbar-title" href="#home">Classic NBA</Navbar.Brand>
+                            <NavLink className="navbar-title" to="/">Classic NBA</NavLink>
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                             <Nav className="list-item">
-                                <Nav.Link className="list-item" href="#home">Inicio</Nav.Link>
-                                <Nav.Link className="list-item" href="#link">Productos</Nav.Link>
-                                <Nav.Link className="list-item" href="#link">Contacto</Nav.Link>
-                                <Nav.Link className="list-item" href="#link">Ayuda</Nav.Link>
+                                <NavLink className="list-item" to="/atlanta">ATLANTA</NavLink>
+                                <NavLink className="list-item" to="/celtics">CELTICS</NavLink>
+                                <NavLink className="list-item" to="/chicago">CHICAGO</NavLink>
                             </Nav>
                             <CartWidget/>
                         </Container>
