@@ -1,6 +1,7 @@
 import {useParams} from 'react-router';
 import {getProductoId} from '../../utils/getProductoId';
 import {Link} from 'react-router-dom';
+import { ItemCount } from '../Contador/ItemCount';
 import '../estilos.css';
 
 export const ProductoDetail = () => {
@@ -31,9 +32,15 @@ export const ProductoDetail = () => {
                     <h3>Modelo: {productoDetail.modelo}</h3>
                     <h5>Nombre: {productoDetail.nombre}</h5>
                     <h5>Precio: $ {productoDetail.precio}</h5>
+                    <hr/>
+                    <Link className="btn btn-dark mt-3" >Agregar al carrito</Link>
+                    <div>
+                        <ItemCount/>
+                    </div>
                 </div>
             </div>
             <Link className="btn btn-dark mt-3" to={path}>Volver</Link>
+            
         </div>
     )
 }
