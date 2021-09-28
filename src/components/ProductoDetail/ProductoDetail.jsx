@@ -33,10 +33,7 @@ export const ProductoDetail = () => {
                     <h5>Nombre: {productoDetail.nombre}</h5>
                     <h5>Precio: $ {productoDetail.precio}</h5>
                     <hr/>
-                    <Link className="btn btn-dark mt-3" >Agregar al carrito</Link>
-                    <div>
-                        <ItemCount/>
-                    </div>
+                    <ItemCount/>
                 </div>
             </div>
             <Link className="btn btn-dark mt-3" to={path}>Volver</Link>

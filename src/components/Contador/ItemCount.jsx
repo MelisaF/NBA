@@ -1,27 +1,30 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from "react-router-dom";
+import {useState} from "react";
 
 export const ItemCount = () => {
     const [valor, setValor] = useState(0);
+    const [cart, setCart] = useState(0);
     
-    const handleSum = () => {
+    const onSum = () => {
         setValor(valor + 1);
     }
-    const handleRes = () => {
+    const onRes = () => {
         if(valor === 0) {
             return;
         }
         setValor (valor - 1);
     }
-    const handleAdd = ()=> {
-        
+    const onAdd = ()=> {
+        setCart(cart + valor);
     }
-    
     return (
         <div>
-            <Link className="btn btn-dark me-3 mt-3" onClick= {handleRes}>−</Link>
-            <span>0</span>
-            <Link className="btn btn-dark ms-3 mt-3" onClick= {handleSum}>+</Link>
+            <Link className="btn btn-dark mt-3" onClick={onAdd}>Agregar al carrito</Link>
+            <div>
+                <span className="btn btn-dark me-3 mt-3" onClick= {onRes}>−</span>
+                <span>{valor}</span>
+                <span className="btn btn-dark ms-3 mt-3" onClick= {onSum}>+</span>
+            </div>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import './Navbar.css';
 import {FaShoppingCart, FaUserAlt} from "react-icons/fa";
 
-const CartWidget = () => {
+const CartWidget = ({cart}) => {
     return (
         <div className="btn-icon">
             <FaUserAlt className="icons"/>

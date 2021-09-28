@@ -7,11 +7,12 @@ import {ProductoDetail} from "../ProductoDetail/ProductoDetail";
 import { PaginaInicio } from "../PaginaInicio/PaginaInicio";
 import {NavBar} from "../Navbar/NavBar";
 
-export const AppRoutes = () => {
+export const AppRoutes = ({cart}) => {
+   
     return (
         <div>
             <Router>
-                <NavBar/>
+                <NavBar cart={cart}/>
                 <Switch>
                     <Route path="/" exact component={PaginaInicio}/>
                     <Route path="/atlanta" exact component={ProductosAtlanta}/>
