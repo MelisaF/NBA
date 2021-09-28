@@ -8,7 +8,7 @@ import { PaginaInicio } from "../PaginaInicio/PaginaInicio";
 import {NavBar} from "../Navbar/NavBar";
 
 export const AppRoutes = ({cart}) => {
-   
+
     return (
         <div>
             <Router>

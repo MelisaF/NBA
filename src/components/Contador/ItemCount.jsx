@@ -1,4 +1,3 @@
-import {Link} from "react-router-dom";
 import {useState} from "react";
 
 export const ItemCount = () => {
@@ -19,7 +18,7 @@ export const ItemCount = () => {
     }
     return (
         <div>
-            <Link className="btn btn-dark mt-3" onClick={onAdd}>Agregar al carrito</Link>
+            <span className="btn btn-dark mt-3" onClick= {onAdd}>Agregar al carrito</span>
             <div>
                 <span className="btn btn-dark me-3 mt-3" onClick= {onRes}>−</span>
                 <span>{valor}</span>
