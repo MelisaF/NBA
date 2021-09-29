@@ -11,24 +11,24 @@
     background-color: rgb(245, 63, 63);
     font-size: 1.2rem;
     font-weight: bold;
-    color:white;
+    color:black;
     text-decoration: none;
     justify-items: center;
     gap: 20%;
 }
 .list-item :hover {
-    color:black
+    color:white;
 }
 
 .navbar-title {
     font-family: 'Dancing Script', cursive;
     justify-self: start;
     background-color: rgb(245, 63, 63);
-    color:white;
+    color:black;
     text-decoration: none;
 }
 .navbar-title :hover {
-    color:black;
+    color:white;
 }
 .icons{
     font-size: 1.6rem;

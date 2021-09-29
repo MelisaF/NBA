@@ -15,10 +15,11 @@ export const ItemCount = () => {
     }
     const onAdd = ()=> {
         setCart(cart + valor);
+        console.log("se agrega al carrito");
     }
     return (
         <div>
-            <span className="btn btn-dark mt-3" onClick= {onAdd}>Agregar al carrito</span>
+            <button className="btn btn-dark mt-3" onClick= {onAdd}>Agregar al carrito</button>
             <div>
                 <span className="btn btn-dark me-3 mt-3" onClick= {onRes}>−</span>
                 <span>{valor}</span>

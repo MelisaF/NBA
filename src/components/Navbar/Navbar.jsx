@@ -18,6 +18,7 @@ export const NavBar = ({cart}) => {
                                 <NavLink className="list-item" to="/atlanta">ATLANTA</NavLink>
                                 <NavLink className="list-item" to="/celtics">CELTICS</NavLink>
                                 <NavLink className="list-item" to="/chicago">CHICAGO</NavLink>
+                                <NavLink className="list-item" to="/contacto">CONTACTO</NavLink> 
                             </Nav>
                             <CartWidget cart={cart}/>
                         </Container>
