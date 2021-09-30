@@ -5,15 +5,15 @@ import { ProductosCeltics } from "../ProductosCeltics/ProductosCeltics";
 import { ProductosChicago } from "../ProductosChicago/ProductosChicago";
 import {ProductoDetail} from "../ProductoDetail/ProductoDetail";
 import { PaginaInicio } from "../PaginaInicio/PaginaInicio";
-import {NavBar} from "../Navbar/NavBar";
+import {NavBar} from "../Navbar/Navbar";
 import {Contacto} from "../Formulario/Contacto";
 
-export const AppRoutes = ({onAdd}) => {
+export const AppRoutes = () => {
 
     return (
         <div>
             <Router>
-                <NavBar onAdd={onAdd}/>
+                <NavBar/>
                 <Switch>
                     <Route path="/" exact component={PaginaInicio}/>
                     <Route path="/atlanta" exact component={ProductosAtlanta}/>

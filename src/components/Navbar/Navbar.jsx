@@ -1,9 +1,10 @@
 import {Navbar, Container, Nav} from "react-bootstrap";
 import CartWidget from "./CartWidget";
 import './Navbar.css';
-import {NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom';
 
-export const NavBar = ({cart}) => {
+export const NavBar = ({onAdd}) => {
+
         return(
             <div>
                 <div>
@@ -20,7 +21,7 @@ export const NavBar = ({cart}) => {
                                 <NavLink className="list-item" to="/chicago">CHICAGO</NavLink>
                                 <NavLink className="list-item" to="/contacto">CONTACTO</NavLink> 
                             </Nav>
-                            <CartWidget cart={cart}/>
+                            <CartWidget onClick={onAdd}/>
                         </Container>
                     </Navbar>   
                 </div>

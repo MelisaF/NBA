@@ -17,17 +17,4 @@
 .description-container {
     margin-left: 10px;
 }
-.container-form {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin-left: 5%;
-}
-.title-contact {
-    margin-left: 5%;
-    margin-top: 3%;
-}
-.btn-enviar {
-    width: 30%;
-    margin-left: 70%;
-}
+

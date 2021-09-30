@@ -1,30 +1,60 @@
 import "../estilos.css";
+import { Fragment, useState } from "react";
 
 export const Contacto = () => {
+    const [datos, setDatos] = useState({
+        nombre: '',
+        apellido: '',
+        email: ''
+    })
 
-    const handleSelect = (e) => {
-        console.log(e.target.value);
+    const handleInputChange = (e) => {
+        setDatos({
+            ...datos,
+            [e.target.name] : e.target.value
+        })
     }
-    const handleButton = (e) => {
-        e.preventDefault();
-        console.log("enviar formulario")
+    const enviarDatos = (e) => {
+        e.preventDefault ();
     }
+
     return (
-        <div>
-            <h1 className="title-contact">CONTACTO</h1>
-            <form className="container-form">
-                <label>Nombre y apellido:  </label>
-                <input type="text" name="name"></input>
-                <label>Email: </label>
-                <input type="text" name="email"></input><br/>
-                <textarea>Escribe tu comentario</textarea><br/>
-                <h5>Quiero recibir notificaciones</h5>
-                <select onChange={handleSelect}>
-                    <option value="si">Si</option>
-                    <option value="no">No</option>
-                </select><br/>
-                <button className="btn btn-dark btn-enviar" onClick= {handleButton}>Enviar</button>
-            </form>
-        </div>
+        <Fragment>
+            <div className="container mt-3">
+                <h1>CONTACTO</h1>
+                <form className="row" onSubmit={enviarDatos}>
+                    <div className="col-md-3">
+                        <input 
+                        placeholder="Ingrese nombre" 
+                        className="form-control"
+                        type="text"
+                        name="nombre"
+                        onChange= {handleInputChange}>
+                        </input>
+                    </div>
+                    <div className="col-md-3">
+                        <input 
+                        placeholder="Ingrese apellido" 
+                        className="form-control"
+                        type="text"
+                        name="apellido"
+                        onChange= {handleInputChange}>
+                        </input>
+                    </div>
+                    <div className="col-md-3">
+                        <input
+                        placeholder="Ingrese email" 
+                        className="form-control"
+                        type="email"
+                        name="email"
+                        onChange={handleInputChange}>
+                        </input>
+                    </div>
+                    <div className="col-md-3">
+                        <button className="btn btn-dark" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </Fragment>
     )
 }
